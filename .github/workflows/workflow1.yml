@@ -1,6 +1,6 @@
 name: Local Test
 
-on: [workflow_dispatch, workflow_call]
+on: [workflow_dispatch, workflow_call,push]
 
 jobs:
   # test action works running from the graph  
