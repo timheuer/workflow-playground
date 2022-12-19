@@ -12,7 +12,7 @@ jobs:
 
     - name: Write file (1)
       id: write_file
-      uses: ./
+      uses: timheuer/base64-to-file@master
       with:
         fileName: 'stuff/myTemporaryFile.txt'
         encodedString: ${{ secrets.SOME_ENCODED_STRING }} # SGVsbG8sIFdvcmxkIQ==
