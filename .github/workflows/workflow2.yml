@@ -7,9 +7,3 @@ jobs:
   decode_file_1:
     name: Decode file
     uses: timheuer/workflow-playground/.github/workflows/workflow1.yml@main
-    with:
-      encodedString: 'SGVsbG8sIFdvcmxkIQ=='
-
-  decode_file_2:
-    name: Decode file
-    uses: timheuer/workflow-playground/.github/workflows/workflow1.yml@main

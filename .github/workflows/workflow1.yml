@@ -15,4 +15,4 @@ jobs:
       uses: timheuer/base64-to-file@main
       with:
         fileName: 'stuff/myTemporaryFile.txt'
-        encodedString: ${{ secrets.SOME_ENCODED_STRING }} # SGVsbG8sIFdvcmxkIQ==
+        encodedString: 'SGVsbG8sIFdvcmxkIQ==' #${{ secrets.SOME_ENCODED_STRING }} # SGVsbG8sIFdvcmxkIQ==
