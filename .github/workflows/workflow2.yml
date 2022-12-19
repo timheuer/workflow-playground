@@ -7,3 +7,4 @@ jobs:
   decode_file_1:
     name: Decode file
     uses: timheuer/workflow-playground/.github/workflows/workflow1.yml@main
+    secrets: inherit
