@@ -4,6 +4,12 @@ on: [workflow_dispatch, workflow_call,push]
 
 jobs:
   # test action works running from the graph  
-  decode_file:
+  decode_file_1:
+    name: Decode file
+    uses: timheuer/workflow-playground/.github/workflows/workflow1.yml@main
+    with:
+      encodedString: 'SGVsbG8sIFdvcmxkIQ=='
+
+  decode_file_2:
     name: Decode file
     uses: timheuer/workflow-playground/.github/workflows/workflow1.yml@main
