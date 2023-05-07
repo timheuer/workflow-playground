@@ -12,7 +12,14 @@ jobs:
 
     - name: Write file (1)
       id: write_file
-      uses: timheuer/base64-to-file@main
+      uses: timheuer/base64-to-file@v2
       with:
         fileName: 'stuff/myTemporaryFile.txt'
         encodedString: ${{ secrets.SOME_ENCODED_STRING }} # SGVsbG8sIFdvcmxkIQ==
+        
+    - name: Create build number
+      run: |
+        now=$(date +'%Y%m%d')
+        buildNumber=$now.$GITHUB_RUN_NUMBER
+        echo "BUILD_NUMBER=$buildNumber" >> $GITHUB_ENV
+        echo "$buildNumber"
