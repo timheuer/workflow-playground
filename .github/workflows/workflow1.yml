@@ -6,6 +6,19 @@ jobs:
   # test action works running from the graph  
   test:
     runs-on: ubuntu-latest
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: true
+      DOTNET_GENERATE_ASPNET_CERTIFICATE: false
+      DOTNET_ADD_GLOBAL_TOOLS_TO_PATH: false
+      DOTNET_MULTILEVEL_LOOKUP: 0
+      DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: true
+      TERM: xterm
+      PROJECT_PATH: src/mymarketplace.csproj
+      AZURE_WEBAPP_NAME: csdkmp
+      AZURE_WEBAPP_PACKAGE_PATH: ./publish
+      CONFIGURATION: Release
     steps:
     - name: Checkout
       uses: actions/checkout@v3
