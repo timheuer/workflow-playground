@@ -1,0 +1,20 @@
+name: "Consumer"
+
+on: workflow_dispatch
+      
+jobs:
+  build:
+    name: Build and Test
+    uses: ./.github/workflows/_core.yml
+
+  publish:
+    needs: build
+    name: Publish
+    runs-on: ubuntu-latest
+    env:
+        VERSION: ${{ needs.build.outputs.echoed }}
+
+    steps:
+    - name: Echoed value
+      run: |
+          echo ${{ env.VERSION }}
