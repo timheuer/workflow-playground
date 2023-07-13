@@ -15,3 +15,7 @@ jobs:
         id: final_echo
         run: |
           echo "echoed=timvaluehuer" >> "$GITHUB_OUTPUT"
+
+      - name: echo output
+        run: |
+          echo "echoed: ${{ steps.final_echo.outputs.echoed }}"
