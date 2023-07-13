@@ -14,4 +14,4 @@ jobs:
       - name: echo stuff
         id: final_echo
         run: |
-          echo "::set-output name=echoed::timvaluehere"
+          echo "echoed=timvaluehuer" >> "$GITHUB_OUTPUT"

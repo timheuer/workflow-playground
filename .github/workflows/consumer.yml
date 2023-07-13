@@ -12,7 +12,7 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     env:
-        ECHOED_VAL: ${{ needs.build.outputs['echoed'] }}
+        ECHOED_VAL: ${{ needs.build.outputs.echoed }}
 
     steps:
     - name: Echoed value
