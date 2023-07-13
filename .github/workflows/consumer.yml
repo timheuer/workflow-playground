@@ -17,4 +17,4 @@ jobs:
     steps:
     - name: Echoed value
       run: |
-          echo "The value from output: ${{ env.ECHOED_VAL }}""
+          echo "The value from output: ${{ env.ECHOED_VAL }}"
