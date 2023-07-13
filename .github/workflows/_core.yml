@@ -1,6 +1,6 @@
 name: Workflow Test
 
-on: 
+on:
   workflow_call:
     outputs:
       echoed: ${{ jobs.echostuff.outputs.echoed }}
@@ -8,6 +8,7 @@ on:
 jobs:
   # test action works running from the graph  
   echostuff:
+    name: Echo Stuff
     outputs:
       echoed: ${{ steps.final_echo.outputs.echoed }}
     runs-on: ubuntu-latest
@@ -17,7 +18,7 @@ jobs:
       - name: echo stuff
         id: final_echo
         run: |
-          echo "echoed=timvaluehuer" >> "$GITHUB_OUTPUT"
+          echo "echoed=timvaluehuer" >> $env:GITHUB_OUTPUT
 
       - name: echo output
         run: |
