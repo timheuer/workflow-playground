@@ -1,6 +1,9 @@
 name: Workflow Test
 
-on: workflow_call
+on: 
+  workflow_call:
+    outputs:
+      echoed: ${{ github.event.inputs.echoed }}
 
 jobs:
   # test action works running from the graph  
