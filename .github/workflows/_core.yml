@@ -3,7 +3,8 @@ name: Workflow Test
 on:
   workflow_call:
     outputs:
-      echoed: 
+      echoed-value:
+        description: 'The value echoed by the action'
         value: ${{ jobs.echostuff.outputs.echoed }}
 
 jobs:
@@ -18,8 +19,9 @@ jobs:
 
       - name: echo stuff
         id: final_echo
+        shell: pwsh
         run: |
-          echo "echoed=timvaluehuer" >> $env:GITHUB_OUTPUT
+          "echoed=timvaluehuer" >> $env:GITHUB_OUTPUT
 
       - name: echo output
         run: |
