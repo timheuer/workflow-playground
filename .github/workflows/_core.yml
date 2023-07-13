@@ -3,7 +3,7 @@ name: Workflow Test
 on: 
   workflow_call:
     outputs:
-      echoed: ${{ github.event.inputs.echoed }}
+      echoed: ${{ jobs.echostuff.outputs.echoed }}
 
 jobs:
   # test action works running from the graph  
