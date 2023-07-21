@@ -27,14 +27,14 @@ jobs:
       id: write_file
       uses: timheuer/base64-to-file@v1
       with:
-        fileName: 'stuff/myTemporaryFile.txt'
+        fileName: './stuff/myTemporaryFile.txt'
         encodedString: ${{ secrets.SOME_ENCODED_STRING }} # SGVsbG8gd29ybGQsIGhvdyBhcmUgeW91Pw==
 
     - name: Upload file
       uses: actions/upload-artifact@v3
       with:
         name: myTemporaryFile
-        path: stuff/myTemporaryFile.txt
+        path: ./stuff/myTemporaryFile.txt
         
     - name: Create build number
       run: |
