@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: myTemporaryFile
-        path: ./myTemporaryFile.txt
+        path: ${{ steps.write_file.outputs.filePath }}
         
     - name: Create build number
       run: |
