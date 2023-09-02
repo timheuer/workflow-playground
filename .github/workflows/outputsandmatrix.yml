@@ -22,6 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: job1
     strategy:
+      max-parallel: 1
       matrix:
         output_one: ${{ fromJson(needs.job1.outputs.output_one) }}
     steps:
