@@ -15,7 +15,8 @@ jobs:
       - id: step1
         name: Step 1
         run: |
-          echo "output_one=${{ toJson([{'name':'backend'},{'name':'frontend'}])}}" >> $GITHUB_OUTPUT
+          json_string="[{\"name\":\"backend\"},{\"name":\"frontend\"}]"
+          echo "output_one=$json_string" >> $GITHUB_OUTPUT
 
   job2:
     runs-on: ubuntu-latest
