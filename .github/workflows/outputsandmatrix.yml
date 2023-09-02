@@ -15,7 +15,7 @@ jobs:
       - id: step1
         name: Step 1
         run: |
-          json_string="[{\"name\":\"backend\"},{\"name\":\"frontend\"}]"
+          json_string="[{\"name\":\"customerprofiles\"},{\"name\":\"basket\"},{\"name\":\"orderprocessor\"},{\"name\":\"catalog\"},{\"name\":\"frontend\"}]"
           echo "output_one=$json_string" >> $GITHUB_OUTPUT
 
   job2:
