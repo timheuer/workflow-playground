@@ -1,0 +1,20 @@
+name: "Maui macos"
+
+on: workflow_dispatch
+      
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install maui
+        shell: pwsh
+        run: |
+          dotnet workload update
+          dotnet workload install maui
