@@ -16,5 +16,6 @@ jobs:
       - name: install maui
         shell: pwsh
         run: |
+          dotnet nuget locals all --clear
           dotnet workload update
-          dotnet workload install maui
+          dotnet workload install maui macos ios wasm-tools
