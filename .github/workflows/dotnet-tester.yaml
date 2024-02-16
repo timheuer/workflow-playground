@@ -1,4 +1,4 @@
-name: "Build"
+name: "Build dotnet v4"
 
 on:
   push:
